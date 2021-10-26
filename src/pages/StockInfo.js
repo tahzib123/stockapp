@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import CompanyInfo from '../ui-components/info-sections/CompanyInfo';
 import Marketinfo from '../ui-components/info-sections/Marketinfo';
+import ValuationInfo from '../ui-components/info-sections/ValuationInfo';
 import Searchbar from '../ui-components/Searchbar';
 import LineChartv2 from '../ui-components/chart-components/LineChartv2';
 import Layout from '../layouts/Layout';
@@ -34,10 +35,11 @@ const StockInfo = () => {
 
     return (
         <Layout>
-            <div className = "mt-10 px-2 sm:px-0">
+            <div className = "mt-10">
                 <Searchbar />
                 <CompanyInfo quoteType = {stockData.quoteType}  summaryProfile = {stockData.summaryProfile} ticker = {ticker} price = {stockData.price} />
                 <Marketinfo prices = {stockData.price} />
+                <ValuationInfo summaryDetail = {stockData.summaryDetail} />
                 <LineChartv2 />
             </div>
         </Layout>

@@ -5,16 +5,20 @@ import MarketInfoSkeleton from '../skeleton-components/MarketInfoSkeleton'
 const Articles = ({articleList}) => {
     if(articleList.length > 0){
         return (
-            articleList.map((article) => {
-                console.log(article.main_image);
-                return <Article 
-                title = {article.title} 
-                link = {article.link}
-                summary = {article.summary}
-                author = {article.author}
-                image = {article.main_image}
-                />
-            })
+            <>
+                <div className = "mt-80 h-full ">
+                    <h1 className = "text-gray-800 dark:text-white dark:border-gray-300 font-bold text-xl inline border-b-2 border-gray-800">Stories </h1>
+                </div>
+                {articleList.map((article) => {
+                    return <Article 
+                    title = {article.title} 
+                    link = {article.link}
+                    summary = {article.summary}
+                    author = {article.author}
+                    image = {article.main_image}
+                    />
+                })}
+            </>
         )  
     }else {
         return (

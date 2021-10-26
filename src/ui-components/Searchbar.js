@@ -13,12 +13,12 @@ const Searchbar = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSearchValue('');
-        history.push(`/${searchValue}`)
+        history.push(`/stockapp/${searchValue}`)
     }
 
     return (
         <form onSubmit = {handleSubmit}>
-                <div className="shadow flex mx-5 sm:mx-0">
+                <div className="shadow flex">
                     <input onChange = {handleChange} className="w-full rounded p-4 dark:bg-gray-800 dark:text-gray-100" type="text" placeholder="Search..." />
                     <button type = "submit" className="w-auto flex justify-end items-center text-blue-500 p-2 hover:text-blue-400 dark:bg-gray-800">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

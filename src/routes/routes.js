@@ -11,10 +11,10 @@ const routes = () => {
     return (
         <Router>
             <Switch>
-            <Route exact path="/">
+            <Route exact path="/stockapp">
                 <Home />
             </Route>
-            <Route path="/:ticker">
+            <Route path="/stockapp/:ticker">
                 <StockInfo />
             </Route>
             </Switch>

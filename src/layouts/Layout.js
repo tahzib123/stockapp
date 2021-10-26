@@ -6,8 +6,10 @@ const Layout =({children}) =>{
 
             <main className = "dark:bg-gray-900">
                 <Navigation />
-                <div className = "md: max-w-7xl  mx-auto">
-                    {children}
+                <div className="mx-5 md:max-w-7xl md:mx-auto ">
+                    <div>
+                        {children}
+                    </div>
                 </div>
             </main>
         </>

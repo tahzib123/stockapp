@@ -28,10 +28,7 @@ const Home = () => {
             <Layout>
                 <Jumbotron />
                 <Searchbar />
-                <div className = "mt-80 h-full mx-5 sm:mx-0">
-                    <h1 className = "text-gray-800 dark:text-white font-bold text-xl inline border-b-2 border-gray-800">Stories </h1>
-                </div>
-                <Articles articleList = {newsArticles} />
+                <Articles articleList = {newsArticles.slice(0, 10)} />
             </Layout>
     )
 }
