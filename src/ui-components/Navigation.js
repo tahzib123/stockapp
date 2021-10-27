@@ -6,7 +6,7 @@ const Navigation = () => {
 
     return (
 
-        <nav className="bg-gray-800 dark:bg-gray-900">
+        <nav className="bg-white   dark:bg-gray-900">
             <div>
                 <div className="flex mx-5 md:max-w-7xl md:mx-auto justify-between py-2">
                     <div className="flex">
@@ -17,7 +17,7 @@ const Navigation = () => {
                             alt="Workflow"
                             />
                         </Link>
-                        <h1 className = "hover:bg-gray-700 text-white px-3 py-2 rounded-md text-m font-medium">
+                        <h1 className = "text-gray-500 dark:hover:bg-gray-700 dark:text-white px-3 py-2 rounded-md text-m font-medium">
                                 <Link to = "/stockapp">Stock Finder</Link>
                         </h1>
                     </div>

@@ -23,7 +23,7 @@ const ValuationInfo = ({summaryDetail}) => {
                 <div className = "flex justify-between">
                     <div>
                         <p className = "mb-2 pr-10 font-normal text-gray-500 dark:text-gray-300">Price To Sales (TTM)</p>
-                        <p className = "mb-2 pr-10 font-normal text-gray-500 dark:text-gray-300">Beta (5Y Monthly</p>
+                        <p className = "mb-2 pr-10 font-normal text-gray-500 dark:text-gray-300">Beta (5Y Monthly)</p>
                         <p className = "mb-2 pr-10 font-normal text-gray-500 dark:text-gray-300">Dividend</p>
                     </div>
                     <div>

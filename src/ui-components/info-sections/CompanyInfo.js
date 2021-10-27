@@ -28,17 +28,17 @@ const CompanyInfo = ({quoteType, summaryProfile, price, ticker}) => {
         return (
             <div className = "mt-10 py-10 ">
                 <div className = "flex md:flex-row sm: flex-col justify-between">
-                    <div className = "mb-5 sm: mb-0">
+                    <div className = "mb-5 sm:mb-0">
                         <h1 className = "text-gray-900 dark:text-white font-bold text-3xl">{companyData.longName} ({companyData.symbol}) </h1>
                         <h2 className ="text-gray-900 dark:text-gray-300 font-bold inline">{companyData.exchangeTimezoneName}</h2>
-                        { <p className = {`text-xs sm:text-sm inline rounded font-light p-0 px-2 ml-1 text-white ${priceData.marketState === "OPEN" ? "bg-green-400" : "bg-red-400"}`}>
+                        { <p className = {`text-xs sm:text-sm inline rounded font-bold p-0.5 px-2 ml-1 text-gray-100 ${priceData.marketState === "OPEN" || "REGULAR" ? "bg-green-500" : "bg-red-500"}`}>
                             {priceData.marketState}
                         </p>}
                     </div>
                     <div className = "flex items-center">
                         <p className = "text-gray-900  text-3xl md:text-5xl dark:text-white font-bold ">{parseFloat(priceData.regularMarketPrice.raw).toFixed(2)}</p>
                         <p className = "text.gray-900 text-xl dark:text-gray-300 md:text-3xl">{priceData.currency}</p>
-                        { <p className = {`text-xs sm:text-sm rounded font-light  p-1 px-2 ml-1 text-white ${priceData.regularMarketChange.raw > 0 ? "bg-green-400" : "bg-red-400"}`}>
+                        { <p className = {`text-xs sm:text-sm rounded font-bold  p-1 px-2 ml-1 text-gray-100 ${priceData.regularMarketChange.raw > 0 ? "bg-green-500" : "bg-red-500"}`}>
                             {priceData.regularMarketChange.raw > 0 ? "+" : ""}{parseFloat(priceData.regularMarketChange.raw).toFixed(2)}
                             {" (" + priceData.regularMarketChangePercent.fmt + ")"}
                         </p>}
